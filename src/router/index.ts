@@ -15,26 +15,26 @@ export const routes: Array<RouteRecordRaw> = [
     // which is lazy-loaded when the route is visited.Å
     component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
   },
-  // {
-  //   path: '/count-item',
-  //   name: 'CountItem',
-  //   component: () => import('@/views/Count/index.vue')
-  // },
-  // {
-  //   path: '/mouse-use',
-  //   name: 'mouseUse',
-  //   component: () => import('@/views/mouseUse/index.vue'),
-  //   children: [
-  //     {
-  //       path: 'initial',
-  //       component: () => import('@/views/mouseUse/mouseWithInitial.vue')
-  //     },
-  //     {
-  //       path: 'useMouse',
-  //       component: () => import('@/views/mouseUse/mouseWithHook.vue')
-  //     }
-  //   ]
-  // },
+  {
+    path: '/count-item',
+    name: 'CountItem',
+    component: () => import('@/views/Count/index.vue')
+  },
+  {
+    path: '/mouse-use',
+    name: 'mouseUse',
+    component: () => import('@/views/mouseUse/index.vue'),
+    children: [
+      {
+        path: 'initial',
+        component: () => import('@/views/mouseUse/mouseWithInitial.vue')
+      },
+      {
+        path: 'useMouse',
+        component: () => import('@/views/mouseUse/mouseWithHook.vue')
+      }
+    ]
+  },
   {
     path: '/invoice',
     name: 'invoice',

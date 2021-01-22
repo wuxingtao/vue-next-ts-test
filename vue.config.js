@@ -1,6 +1,7 @@
 /* eslint-disable */
 
 const path = require('path')
+const HardSourceWebpackPlugin = require('hard-source-webpack-plugin')
 
 function resolve (dir) {
   return path.join(__dirname, dir)
@@ -38,6 +39,10 @@ module.exports = {
       extensions: ['.vue', 'ts', 'tsx', '.js', '.scss', '.css'],
     },
     devtool: process.env.NODE_ENV === 'production' ? false : 'source-map',
+    plugins:[
+      // 优化打包速度
+      new HardSourceWebpackPlugin()
+    ]
     // devtool: 'cheap-module-eval-source-map'
   },
   // chainWebpack: config=>{
