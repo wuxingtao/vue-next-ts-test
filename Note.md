@@ -1,7 +1,8 @@
 ## vue3 升级指南
 
 ### 关于全局变量
->由于Vue3中全局API都会通过app.xxx的方法调用，所以之前通过Vue.prototype.xxx绑定的全局方法和变量将无法使用，可以采用如下方式来代替：
+>由于Vue3中全局API都会通过app.xxx的方法调用，所以之前通过Vue.prototype.xxx
+> 绑定的全局方法和变量将无法使用，可以采用如下方式来代替：
 
 ```
 //在main.js中：
@@ -11,6 +12,16 @@ app.config.globalProperties.http = function(){}
 this.http()
 
 ```
+
+### typescript 全局变量
+
+>方案一使用any
+```ts
+(<any>window).bb = 10;
+(window as any).cc = 20;
+```
+
+>方案二 使用d.ts 声明文件
 
 
 ## tsconfig配置详情
@@ -52,3 +63,6 @@ this.http()
   "exclude": ["node_modules/*"]
 }
 ```
+
+## vue.config
+### 增加HardSourceWebpackPlugin 提升构建速度
