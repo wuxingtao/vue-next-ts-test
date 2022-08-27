@@ -1,19 +1,17 @@
 <script setup lang="ts">
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
-import HelloWorld from './components/HelloWorld.vue'
+import { routes } from '@/router'
+import { ref } from 'vue'
+const routerRecord = ref(routes)
 </script>
 
 <template>
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
+  <div id="nav">
+    <template v-if="routerRecord">
+      <router-link v-for="(item, index) in routerRecord" :to="item.path" :key="index">{{ item.name }}</router-link>
+    </template>
   </div>
-  <HelloWorld msg="Vite + Vue" />
 </template>
 
 <style scoped>
@@ -27,5 +25,23 @@ import HelloWorld from './components/HelloWorld.vue'
 }
 .logo.vue:hover {
   filter: drop-shadow(0 0 2em #42b883aa);
+}
+
+#nav {
+  padding: 30px;
+}
+
+#nav a {
+  font-weight: bold;
+  color: #2c3e50;
+  margin-right: 15px;
+}
+
+#nav a.router-link-exact-active {
+  color: #42b983;
+}
+
+.nav-item {
+  margin-right: 15px;
 }
 </style>
