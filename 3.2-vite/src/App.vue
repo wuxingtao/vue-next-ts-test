@@ -11,6 +11,9 @@ const routerRecord = ref(routes)
     <template v-if="routerRecord">
       <router-link v-for="(item, index) in routerRecord" :to="item.path" :key="index">{{ item.name }}</router-link>
     </template>
+    <div class="content">
+      <router-view />
+    </div>
   </div>
 </template>
 
@@ -43,5 +46,9 @@ const routerRecord = ref(routes)
 
 .nav-item {
   margin-right: 15px;
+}
+
+.content {
+  margin-bottom: 10px;
 }
 </style>
