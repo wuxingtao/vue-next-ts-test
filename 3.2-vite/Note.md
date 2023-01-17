@@ -32,6 +32,25 @@ basic
 
 ## 页面清单
 
+## 功能清单
+
+### composition-api 
+
+*全局变量*
+```js
+// main.js
+app.config.globalProperties.xx = xx
+```
+
+```js
+// xx.vue
+/** 当前实例 */
+const {
+  appContext: {
+    config: { globalProperties },
+  },
+} = getCurrentInstance()
+```
 
 * [vite-vue3-tsx](https://github.com/cangshudada/vite-vue3-tsx)
 * [vite_vue3_ts](https://github.com/xushanpei/vite_vue3_ts)
