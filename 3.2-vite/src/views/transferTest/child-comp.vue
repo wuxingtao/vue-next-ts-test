@@ -10,6 +10,12 @@
 <script lang="ts" setup>
 import { defineEmits, defineExpose, defineProps, inject, reactive, ref } from 'vue'
 
+interface rootDataInterface {
+  transType?: String
+  transValue?: String
+  transNum?: Number
+}
+
 const props = defineProps({
   fatherValue: String || Number
 })
@@ -22,10 +28,10 @@ const state = reactive({})
 
 const inputValue = ref(null)
 
-const rootData = inject('rootData') || {}
+const rootData: rootDataInterface = inject('rootData') || {}
 
-function handleInputChange(event: { target: { value: string } }) {
-  if (event.target.value) {
+function handleInputChange(event: any) {
+  if (event && event.target && event.target.value) {
     emit('valueChange', event.target.value)
   }
 }

@@ -24,7 +24,7 @@ export default {
 </script>
 <script setup>
 import { reactive, ref, defineExpose, computed } from 'vue'
-import ChildComp from './child-comp'
+import ChildComp from './child-comp.vue'
 
 const state = reactive({
   title: '父组件'

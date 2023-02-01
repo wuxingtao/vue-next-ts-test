@@ -14,7 +14,7 @@
 
 <script setup>
 import { computed, defineExpose, provide, reactive, ref, toRefs } from 'vue'
-import FatherComp from './father-comp'
+import FatherComp from './father-comp.vue'
 
 const state = reactive({
   title: '根页面',
@@ -38,7 +38,7 @@ function fatherPhoneChange(val) {
 }
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
 .page__title {
   margin-bottom: 40px;
 }
