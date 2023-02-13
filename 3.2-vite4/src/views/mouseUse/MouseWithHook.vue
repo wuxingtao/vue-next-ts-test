@@ -13,7 +13,7 @@
 </template>
 
 <script setup lang="ts">
-import { useMousePosition } from '@/use/mouse.ts'
+import { useMousePosition } from '@/use/mouse'
 const { x, y } = useMousePosition()
 </script>
 

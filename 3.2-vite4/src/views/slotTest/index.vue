@@ -12,7 +12,7 @@
 </template>
 
 <script setup>
-import TodoList from './TodoList'
+import TodoList from './TodoList.vue'
 </script>
 
 <style scoped></style>

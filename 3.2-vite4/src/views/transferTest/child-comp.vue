@@ -9,6 +9,13 @@
 </template>
 <script lang="ts" setup>
 import { defineEmits, defineExpose, defineProps, inject, reactive, ref } from 'vue'
+interface RootDataInterface {
+  transType?: string
+  transValue?: string
+  transNum?: number
+}
+
+
 
 const props = defineProps({
   fatherValue: String || Number
@@ -22,10 +29,10 @@ const state = reactive({})
 
 const inputValue = ref(null)
 
-const rootData = inject('rootData') || {}
+const rootData:RootDataInterface = inject('rootData') || {}
 
-function handleInputChange(event: { target: { value: string } }) {
-  if (event.target.value) {
+function handleInputChange(event: any) {
+  if (event && event.target && event.target.value) {
     emit('valueChange', event.target.value)
   }
 }

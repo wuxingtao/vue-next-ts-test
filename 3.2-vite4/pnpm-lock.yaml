@@ -1,6 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@types/node': ^18.13.0
   '@vitejs/plugin-vue': ^4.0.0
   pinia: ^2.0.28
   sass: ^1.57.1
@@ -16,10 +17,11 @@ dependencies:
   vue-router: registry.npmmirror.com/vue-router/4.1.6_vue@3.2.45
 
 devDependencies:
+  '@types/node': registry.npmmirror.com/@types/node/18.13.0
   '@vitejs/plugin-vue': registry.npmmirror.com/@vitejs/plugin-vue/4.0.0_vite@4.0.3+vue@3.2.45
   sass: registry.npmmirror.com/sass/1.57.1
   typescript: registry.npmmirror.com/typescript/4.9.4
-  vite: registry.npmmirror.com/vite/4.0.3_sass@1.57.1
+  vite: registry.npmmirror.com/vite/4.0.3_jd55mt5rgpyehisgeknrtdgmeu
   vue-tsc: registry.npmmirror.com/vue-tsc/1.0.16_typescript@4.9.4
 
 packages:
@@ -297,6 +299,12 @@ packages:
     dev: true
     optional: true
 
+  registry.npmmirror.com/@types/node/18.13.0:
+    resolution: {integrity: sha512-gC3TazRzGoOnoKAhUx+Q0t8S9Tzs74z7m0ipwGpSqQrleP14hKxP4/JUeEQcD3W1/aIpnWl8pHowI7WokuZpXg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@types/node/-/node-18.13.0.tgz}
+    name: '@types/node'
+    version: 18.13.0
+    dev: true
+
   registry.npmmirror.com/@vitejs/plugin-vue/4.0.0_vite@4.0.3+vue@3.2.45:
     resolution: {integrity: sha512-e0X4jErIxAB5oLtDqbHvHpJe/uWNkdpYV83AOG2xo2tEVSzCzewgJMtREZM30wXnM5ls90hxiOtAuVU6H5JgbA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@vitejs/plugin-vue/-/plugin-vue-4.0.0.tgz}
     id: registry.npmmirror.com/@vitejs/plugin-vue/4.0.0
@@ -307,7 +315,7 @@ packages:
       vite: ^4.0.0
       vue: ^3.2.25
     dependencies:
-      vite: registry.npmmirror.com/vite/4.0.3_sass@1.57.1
+      vite: registry.npmmirror.com/vite/4.0.3_jd55mt5rgpyehisgeknrtdgmeu
       vue: registry.npmmirror.com/vue/3.2.45
     dev: true
 
@@ -836,7 +844,7 @@ packages:
     engines: {node: '>=4.2.0'}
     hasBin: true
 
-  registry.npmmirror.com/vite/4.0.3_sass@1.57.1:
+  registry.npmmirror.com/vite/4.0.3_jd55mt5rgpyehisgeknrtdgmeu:
     resolution: {integrity: sha512-HvuNv1RdE7deIfQb8mPk51UKjqptO/4RXZ5yXSAvurd5xOckwS/gg8h9Tky3uSbnjYTgUm0hVCet1cyhKd73ZA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/vite/-/vite-4.0.3.tgz}
     id: registry.npmmirror.com/vite/4.0.3
     name: vite
@@ -864,6 +872,7 @@ packages:
       terser:
         optional: true
     dependencies:
+      '@types/node': registry.npmmirror.com/@types/node/18.13.0
       esbuild: registry.npmmirror.com/esbuild/0.16.10
       postcss: registry.npmmirror.com/postcss/8.4.20
       resolve: registry.npmmirror.com/resolve/1.22.1
