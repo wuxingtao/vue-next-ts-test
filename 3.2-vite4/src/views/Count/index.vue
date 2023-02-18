@@ -1,7 +1,7 @@
 <template>
   <div class="page-container">
     <h1>{{ state.viewName }}</h1>
-    <!--    <count-item></count-item>-->
+        <count-item></count-item>
     <count-down style="margin: 20px 0" />
   </div>
 </template>
