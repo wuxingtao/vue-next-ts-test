@@ -1,22 +1,14 @@
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
+// This starter template is using Vue 3 <script setup> SFCs
+// Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
 import { routes } from '@/router'
 import { ref } from 'vue'
 const routerRecord = ref(routes)
 </script>
 
 <template>
-<!--  <div>-->
-<!--    <a href="https://vitejs.dev" target="_blank">-->
-<!--      <img src="/vite.svg" class="logo" alt="Vite logo" />-->
-<!--    </a>-->
-<!--    <a href="https://vuejs.org/" target="_blank">-->
-<!--      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />-->
-<!--    </a>-->
-<!--  </div>-->
-<!--  <HelloWorld msg="Vite + Vue" />-->
   <div id="nav">
-    <h3>page: single-page </h3>
+    <h3>page: index.html</h3>
     <template v-if="routerRecord">
       <router-link v-for="(item, index) in routerRecord" :to="item.path" :key="index">{{ item.name }}</router-link>
     </template>
