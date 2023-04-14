@@ -8,31 +8,42 @@ const resolve = (src) => {
   return path.resolve(__dirname, src)
 }
 export default defineConfig({
-  build: {
-    rollupOptions: {
-      input: {
-        index: resolve('pages/index/index.html'),
-        nested: resolve('pages/nested/index.html')
-      }
-    }
-  },
+  // base: '/', // 相当于publicPath
+  // root: mode === 'development' ? 'src/pages' : '',
+  // build: {
+  //   rollupOptions: {
+  //     input: {
+  //       index: resolve('public/index.html'),
+  //       nested: resolve('public/nested.html')
+  //     }
+  //   }
+  // },
   plugins: [
     vue(),
     createHtmlPlugin({
       minify: true,
       pages: [
         {
-          // entry: resolve('src/pages/index/main.ts'),
           entry: 'src/pages/index/main.ts',
           filename: 'index.html', //打包后生成的html文件名
-          template: 'src/pages/index/index.html',
-          injectOptions: {}
+          template: 'index.html',
+          injectOptions: {
+            data: {
+              title: 'index',
+              injectScript: `<script src="./inject.js"></script>`
+            }
+          }
         },
         {
           entry: 'src/pages/nested/main.ts',
           filename: 'nested.html', //打包后生成的html文件名
-          template: 'src/pages/nested/index.html',
-          injectOptions: {}
+          template: 'nested.html',
+          injectOptions: {
+            data: {
+              title: 'other page',
+              injectScript: `<script src="./inject.js"></script>`
+            }
+          }
         }
       ]
     })

@@ -8,7 +8,7 @@ const routerRecord = ref(routes)
 
 <template>
   <div id="nav">
-    <h3>page: index.html</h3>
+    <h3>page-1: index.html</h3>
     <template v-if="routerRecord">
       <router-link v-for="(item, index) in routerRecord" :to="item.path" :key="index">{{ item.name }}</router-link>
     </template>
