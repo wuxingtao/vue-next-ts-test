@@ -30,7 +30,7 @@ export default defineConfig({
           injectOptions: {
             data: {
               title: 'index',
-              injectScript: `<script src="./inject.js"></script>`
+              injectScript: `<script src="src/modules/inject.js"></script>`
             }
           }
         },
@@ -41,7 +41,7 @@ export default defineConfig({
           injectOptions: {
             data: {
               title: 'other page',
-              injectScript: `<script src="./inject.js"></script>`
+              injectScript: `<script src="src/modules/inject.js"></script>`
             }
           }
         }
