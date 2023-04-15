@@ -3,12 +3,14 @@
 // Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
 import { routes } from '@/router'
 import { ref } from 'vue'
+import PageList from '@/components/page-list.vue'
 const routerRecord = ref(routes)
 </script>
 
 <template>
   <div id="nav">
     <h3>page-1: index.html</h3>
+    <page-list />
     <template v-if="routerRecord">
       <router-link v-for="(item, index) in routerRecord" :to="item.path" :key="index">{{ item.name }}</router-link>
     </template>

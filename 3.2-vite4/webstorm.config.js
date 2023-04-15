@@ -7,7 +7,6 @@ module.exports = {
       '@': resolve('./src'),
       '@views': resolve('src/views'),
       '@api': resolve('src/services/api'),
-      '@comps': resolve('src/components'),
       '@common': resolve('src/common'),
       '@router': '@/router/',
       '@assets': '@/assets',
